@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fill-in-the-BERT </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .textbuttons {
+      text-align: center;
+    } 
+    .form-control{
+      font-family: 'roboto';
+      font-size: 22px;
+    }
+    .info{
+     float: center;
+     text-align: center;
+    }
+    #out{
+     text-align: center; 
+      font-family: 'roboto';
+      font-size: 20px;
+    }
+    
+  </style>
+</head>
+<body>
+<div class="container mt-3">
+  <h2><i>Fill-in-the-</i><b><font color="blue">BERT</font></b></h2>
+  <p><i>Fill-in-the-</i><b><font color="blue">BERT</font></b> is a fill-in-the-blanks model that is trained to predict the missing word in the sentence. For the purpose of this demo we will be using pre-trained <i>bert-base-uncased</i> as our prediction model.</p>
+  <form>
+    <div class="form-group">
+      <label for="comment">Input text:</label>  
+      <textarea class="form-control" rows="1" id="comment"></textarea>
+      <span class='spantext' id='remainingChars'></span>
+    </div>
+    <div class="mt-3 textbuttons">
+      <button type="button" class="btn btn-primary" id="predictBtn" onclick="fillblanks();">Fill in the Blanks</button>
+    </div>
+  </form><br><br>
+
+  <div class='info'>
+     <p id="output" style='font-family: "roboto";font-size: 22px;'></p> 
+  </div><br><br>
+  
+</div>
+
+<script type="text/javascript">
+    function fillblanks(){
+      var input_txt = document.getElementById('comment').value
+      var URL = 'http://0.0.0.0:5000/fillblanks'
+      var dataString = "text="+input_txt;
+      
+      $.ajax({
+          type: 'POST',
+          url: URL,
+          data: dataString,
+          success: function(resp) {
+            document.getElementById('output').innerHTML = resp;
+          }
+      });
+    }
+  
+</script>
+  
+</body>
+</html>
