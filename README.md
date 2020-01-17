@@ -16,7 +16,7 @@ Open index.html in the browser and start typing :speech_balloon:
 * __Model__ - bert-base-uncased
 * __Pre-trained Task__ - MaskedLM
 
-_P.S. The attention visualisation is done for layer 2 across all attention heads by taking their average._
+_P.S. The attention visualisation is done for layer 3 across all attention heads by taking their average._ Read more about heads and what they mean at [Visualizing inner workings of attention](https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1)
 
 ## Technologies Used
 1. PyTorch
