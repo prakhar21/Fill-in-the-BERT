@@ -1,5 +1,5 @@
 # Fill-in-the-BERT
-Fill-in-the-BERT is a fill-in-the-blanks model that is trained to predict the missing word in the sentence. For the purpose of this demo we will be using pre-trained bert-base-uncased as our prediction model. If you are new to BERT, please read [BERT-Explained](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270) and [Visual Guide to BERT](http://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/)
+Fill-in-the-BERT is a fill in the blanks model that is trained to predict the missing word in the sentence. For the purpose of this demo we will be using pre-trained bert-base-uncased as our prediction model. If you are new to BERT, please read [BERT-Explained](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270) and [Visual Guide to BERT](http://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/)
 
 ## Steps to Run
 ````
