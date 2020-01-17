@@ -16,6 +16,8 @@ Open index.html in the browser and start typing :speech_balloon:
 * __Model__ - bert-base-uncased
 * __Pre-trained Task__ - MaskedLM
 
+_P.S. The attention visualisation is done for layer 2 across all attention heads by taking their average._
+
 ## Technologies Used
 1. PyTorch
 2. HTML/Bootstrap
